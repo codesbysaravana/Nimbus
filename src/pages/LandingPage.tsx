@@ -28,9 +28,7 @@ export default function LandingPage() {
         </div>
         <div className="flex items-center gap-4">
           <button className="px-6 py-2 font-medium">LOG IN</button>
-          <button className="px-6 py-2 bg-black text-white font-medium rounded">
-            SIGN UP
-          </button>
+          <button className="px-6 py-2 bg-black text-white font-medium rounded">SIGN UP</button>
         </div>
       </nav>
 
@@ -55,11 +53,7 @@ export default function LandingPage() {
 
         {/* Feather icon */}
         <div className="absolute right-20 top-32">
-          <svg
-            className="w-32 h-32 text-gray-900"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
+          <svg className="w-32 h-32 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2c-1.104 0-2 .896-2 2 0 1.104.896 2 2 2s2-.896 2-2c0-1.104-.896-2-2-2zm0 4c-.552 0-1 .448-1 1v8c0 .552.448 1 1 1s1-.448 1-1V7c0-.552-.448-1-1-1zm-3-2c-.552 0-1 .448-1 1v12c0 .552.448 1 1 1s1-.448 1-1V5c0-.552-.448-1-1-1zm6 0c-.552 0-1 .448-1 1v12c0 .552.448 1 1 1s1-.448 1-1V5c0-.552-.448-1-1-1z" />
           </svg>
         </div>
@@ -67,9 +61,7 @@ export default function LandingPage() {
 
       {/* Figma to App Pipeline Section */}
       <section className="px-8 py-16">
-        <h2 className="text-2xl font-bold text-center mb-12">
-          Figma -&gt; App Pipeline
-        </h2>
+        <h2 className="text-2xl font-bold text-center mb-12">Figma -&gt; App Pipeline</h2>
 
         <div className="border-2 border-gray-400 rounded-3xl p-8 mb-12">
           <div className="grid grid-cols-5 gap-6">
@@ -77,17 +69,17 @@ export default function LandingPage() {
               {
                 title: 'Input',
                 subtitle: 'Figma',
-                items: ['Quick prototyping to validate']
+                items: ['Quick prototyping to validate'],
               },
               {
                 title: 'Design',
                 subtitle: 'Figma',
-                items: ['Shape the structure', 'Create the foundation']
+                items: ['Shape the structure', 'Create the foundation'],
               },
               {
                 title: 'Frontend',
                 subtitle: 'System',
-                items: ['Generate frames & JSON', 'Create UI layer']
+                items: ['Generate frames & JSON', 'Create UI layer'],
               },
               {
                 title: 'Backend',
@@ -100,15 +92,15 @@ export default function LandingPage() {
                   'Integrator',
                   'Validator',
                   'Orchestrator',
-                  'Character'
-                ]
+                  'Character',
+                ],
               },
               {
                 title: 'Deploy',
                 subtitle: 'Pipeline',
                 items: ['Staging output', 'QA automation'],
-                expandedItems: ['CODE', 'API Specs', 'UI Builder']
-              }
+                expandedItems: ['CODE', 'API Specs', 'UI Builder'],
+              },
             ].map((column, idx) => (
               <div key={idx} className="border border-gray-300 rounded-lg p-4">
                 <h3 className="font-bold mb-1">{column.title}</h3>
@@ -135,17 +127,13 @@ export default function LandingPage() {
       {/* Multi-agent Workflow */}
       <section className="px-8 py-16">
         <div className="border-2 border-gray-400 rounded-3xl p-24 text-center bg-white mb-12">
-          <p className="text-gray-700">
-            Multi-agent workflow for design-to-Production
-          </p>
+          <p className="text-gray-700">Multi-agent workflow for design-to-Production</p>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="px-8 py-16 text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">
-          Powerful Features, Simple Interface
-        </h2>
+        <h2 className="text-3xl font-bold mb-4">Powerful Features, Simple Interface</h2>
         <p className="text-gray-700">
           Everything you need to build sophisticated AI agents without the complexity
         </p>

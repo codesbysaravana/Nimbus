@@ -13,9 +13,7 @@ export default function ForgotPass() {
 
         {/* Email Section */}
         <div className="mb-8">
-          <label className="block text-sm font-medium text-gray-700 mb-3">
-            Email:
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-3">Email:</label>
           <input
             type="email"
             placeholder="Enter your email address..."
@@ -28,9 +26,7 @@ export default function ForgotPass() {
 
         {/* OTP Section */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-3">
-            OTP:
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-3">OTP:</label>
           <input
             type="text"
             placeholder="Enter your OTP..."

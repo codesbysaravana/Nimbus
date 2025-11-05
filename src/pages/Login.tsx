@@ -44,9 +44,7 @@ export default function Login() {
 
         {/* Email Input */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Email:
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Email:</label>
           <input
             type="email"
             placeholder="Enter your email address..."
