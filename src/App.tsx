@@ -1,34 +1,76 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import LandingPage from './pages/LandingPage'
+import Login from './pages/Login'
+import ForgotPass from './pages/ForgotPass'
+import Dashboard from './pages/Dashboard'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState('landing')
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'landing':
+        return <LandingPage />
+      case 'login':
+        return <Login />
+      case 'forgot-password':
+        return <ForgotPass />
+      case 'dashboard':
+        return <Dashboard />
+      default:
+        return <LandingPage />
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="min-h-screen">
+      {renderPage()}
+
+      {/* Navigation Bar for Testing */}
+      <div className="fixed bottom-6 right-6 flex gap-2 z-50">
+        <button
+          onClick={() => setCurrentPage('landing')}
+          className={`px-4 py-2 rounded text-sm font-medium transition ${
+            currentPage === 'landing'
+              ? 'bg-black text-white'
+              : 'bg-white text-black border border-gray-300 hover:border-gray-400'
+          }`}
+        >
+          Landing
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <button
+          onClick={() => setCurrentPage('login')}
+          className={`px-4 py-2 rounded text-sm font-medium transition ${
+            currentPage === 'login'
+              ? 'bg-black text-white'
+              : 'bg-white text-black border border-gray-300 hover:border-gray-400'
+          }`}
+        >
+          Login
+        </button>
+        <button
+          onClick={() => setCurrentPage('forgot-password')}
+          className={`px-4 py-2 rounded text-sm font-medium transition ${
+            currentPage === 'forgot-password'
+              ? 'bg-black text-white'
+              : 'bg-white text-black border border-gray-300 hover:border-gray-400'
+          }`}
+        >
+          Forgot Password
+        </button>
+        <button
+          onClick={() => setCurrentPage('dashboard')}
+          className={`px-4 py-2 rounded text-sm font-medium transition ${
+            currentPage === 'dashboard'
+              ? 'bg-black text-white'
+              : 'bg-white text-black border border-gray-300 hover:border-gray-400'
+          }`}
+        >
+          Dashboard
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
